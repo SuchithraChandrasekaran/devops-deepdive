@@ -1,3 +1,4 @@
+# 1) Shell and ssh
 
 ## 1. !/bin/ksh and #!/bin/bash – Shebang Lines
 These are called shebang lines, and they are used at the top of a script file to tell the system which shell interpreter to use to run the script.
@@ -48,3 +49,45 @@ Example:
 ssh username@remote-ip
 ```
 This will start a secure terminal session with another machine.
+
+# 2) File Permission
+
+Each file and directory in Linux has **three types of permissions** assigned to **three categories of users**.
+
+### Categories of Users
+1. **User (u)**: The owner of the file.
+2. **Group (g)**: Users belonging to the same group as the file.
+3. **Others (o)**: All other users.
+
+### Types of Permissions
+| Symbol | Meaning       | File Description           | Directory Description             |
+|--------|---------------|----------------------------|-----------------------------------|
+| `r`    | Read          | View file contents         | List directory contents (`ls`)    |
+| `w`    | Write         | Modify or delete file      | Create, delete, or rename inside  |
+| `x`    | Execute       | Run file as a program      | Enter directory (`cd`)            |
+
+Numeric (Octal) Mode
+
+Each permission has a value:
+
+r = 4, w = 2, x = 1
+
+Calculate total for each user type:
+
+| rwx |	Binary |	Decimal |
+|-----|--------|----------|
+| rwx |  111	   | 7 |
+| r-x	|  101	   | 5 |
+| r--	|  100	   | 4 |
+
+File Permission – Octal Summary
+
+| Octal | Symbol     | Meaning                      |
+|--------|------------|------------------------------|
+| 777   | rwxrwxrwx | Full access to all           |
+| 755   | rwxr-xr-x | Owner full, others can read/execute |
+| 700   | rwx------ | Only owner has full access   |
+| 644   | rw-r--r-- | Owner can read/write, others read-only |
+| 600   | rw------- | Only owner can read/write    |
+| 444   | r--r--r-- | Read-only for everyone       |
+| 000   | ---------- | No permissions at all        |
