@@ -1,11 +1,7 @@
 
 # DevOps DeepDive 
 
-This is a **phase-wise, hands-on journey** through the DevOps lifecycle.
-
-Designed to:
-- Document  **end-to-end DevOps learning** 
-- Practice each **tool/technology deeply**
+A **phase-wise, hands-on journey** through the DevOps lifecycle.
 
 ---
 
